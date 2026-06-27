@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tal Aviram (Without The Hope)</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #636C71;
+	margin-left: 0px;
+	background-image: url(images/greyback.jpg);
+	background-repeat: repeat-x;
+	margin-top: 10px;
+}
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #0099FF;
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.style12 {font-size: 12px}
+.style13 {font-family: Arial, Helvetica, sans-serif; color: #FFFFFF;}
+
+.downloadbtn {font-size: 14px; font-family: Arial, Helvetica, sans-serif;}
+a.downloadbtn:link {color:#FF9900;}
+a.downloadbtn:visited {color:#FF9900;}
+a.downloadbtn:hover {color:#FF0000;}
+a.downloadbtn:active {color:#FF9900;}
+.homeback {background-image:url("images/wothpanorama.gif");}
+.pageback {background-image:url("images/wothpanorama2.gif");}
+.style15 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+-->
+</style>
+
+<script type="text/javascript">
+function changeContent(){
+    var x=document.getElementById('contentzone').rows
+    var y=x[0].cells
+    y[0].innerHTML="Without the Hope"
+}
+
+function openContact(){
+window.open('http://www.talaviram.com/woth_contact.php', 'contact', 'width=520,height=436,resizable=no,scrollbars=no,toolbars=no,location=no,directories=no,status=no,menubar=no,copyhistory=no');
+}
+
+function ChangeContent(val)
+{
+	   switch (val)
+		{
+		case 1:
+  		var val = "content/aboutme.html";
+  		break
+		case 2:
+  		var val = "content/lyrics.html";
+  		break
+		case 3:
+  		var val = "content/credits.html";
+  		break
+		case 4:
+  		var val = "content/links.html";
+  		break
+		case 5:
+  		var val = "content/download.html";
+  		break
+		}
+	  //var val = "http://www.takeshifters.com";
+	  frames['content'].location.href = val;
+      //document.all.content.src=val;
+      //document.all.content.style.visibility="visible";
+}
+</script>
+</head>
+
+
+<body>
+<table border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td bordercolor="#FFFFFF"><img src="images/wothtext.gif" alt="WOTH" width="252" height="83" /></td>
+  </tr>
+  <tr>
+    <td width="777" height="279" bordercolor="#FFFFFF" background="images/wothpanorma.gif"><p align="center"><iframe name="content" id="content"  frameborder="0" align="middle" width="360px" height="200px" marignheight="100px" ALLOWTRANSPARENCY="true" scrooling="auto"></iframe></p>
+    <table width="777" border="0" align="center">
+      <tr>
+        <td width="90"><div align="center" class="style12"><span class="style13"><a href="javascript:ChangeContent(1);">about</a></span></div></td>
+        <td width="90"><div align="center" class="style12"><span class="style13"><a href="javascript:ChangeContent(2);">lyrics</a></span></div></td>
+        <td width="90"><div align="center" class="style12"><span class="style13"><a href="javascript:ChangeContent(3);">credits</a></span></div></td>
+        <td width="90"><div align="center" class="style12"><span class="style13"><a href="javascript:openContact();">contact</a></span></div></td>
+        <td width="90"><div align="center" class="style12"><span class="style13"><a href="javascript:ChangeContent(4);">links</a></span></div></td>
+        <td width="180"><div align="center" class="style12"><a href="javascript:ChangeContent(5);" class="downloadbtn">download the album</a></div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<div align="center" class="style15"><span class="style1"><br />
+ All the rights reserved to Tal Aviram</span> <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank"><img src="../images/somerights20.png" alt="CC" width="50" height="16" longdesc="http://creativecommons.org" /></div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<SCRIPT>
+<!-- Coded by Mike Reid (mike@mikereid.net) --
+// Author: Mike Reid  E-mail: mike@mikereid.net
+// Courtesy of SimplytheBest.net - http://simplythebest.net/scripts/
+
+midiList = new Array("","midi_files/song1.mid","midi_files/song2.mid","midi_files/song3.mid");
+titleList = new Array("","Malaguena","Year of Jubilo","Chicken Reel");
+
+playerType=1; 
+checkBold=0; 	 
+checkItalic=1;
+checkUnder=0;
+fontColor='red';
+fontFace='Verdana, Arial, Helvetica';
+
+howMany = midiList.length-1;
+date = new Date();
+seed = date.getTime();
+randomNumber = parseInt(((seed - (parseInt(seed/1000,10) * 1000))/10)/100*howMany
++ 1,10);
+URL = location.href;
+QUERY_POS = URL.indexOf("?") + 1;
+QUERY_STRING = URL.substring(QUERY_POS); 
+QUERY_POS-=1;
+QUERY_POS2=QUERY_POS;
+QUERY_POS2+=1;
+if(QUERY_POS!=0) newLocation=URL.substring(0,QUERY_POS);
+if(QUERY_POS2==0) newLocation=QUERY_STRING;
+if(QUERY_STRING > 0) randomNumber=QUERY_STRING;
+midi=midiList[randomNumber];
+title=titleList[randomNumber];
+if(!title){ 
+midi=midiList[1];
+title=titleList[1];
+randomNumber=1;
+}
+window.defaultStatus="Now playing... "+randomNumber+": "+title;
+ns = ((navigator.appName == "Netscape"));
+ie = ((navigator.appName == "Microsoft Internet Explorer"));
+if(playerType == 1 && ns){ playMP3 = '<EMBED SRC= "' + mp3 + '" WIDTH=200 HEIGHT=18 AUTOSTART=TRUE></EMBED><BR>';}
+else { playMP3 = '<BGSOUND SRC= "' + midi + '" loop=infinite AUTOSTART=TRUE></BGSOUND>';}
+bold=(checkBold==1)?"<B>":"";
+bold2=(checkBold==1)?"</B>":"";
+italic=(checkItalic==1)?"<I>":"";
+italic2=(checkItalic==1)?"</I>":"";
+under=(checkUnder==1)?"<U>":"";
+under2=(checkUnder==1)?"</U>":"";
+function listMIDI(){
+document.write(playMP3);
+for(x=0;x<=howMany;x++){
+if(x==0)document.write("<B>Albums in Jukebox</B>:<BR>");
+if(x!=0 && x!=randomNumber)document.write("<font face="+fontFace+"> "+x+" - "+titleList[x]+" (<A HREF="+newLocation+"?"+x+">play</A>)</font><BR>");
+if(x==randomNumber)document.write("<font color=\""+fontColor+"\" face="+fontFace+">"+bold+""+italic+""+under+""+x+" - "+titleList[x]+""+under2+""+italic2+""+bold2+" - Now playing...</font><BR>");
+}
+}
+//-->
+</SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<SCRIPT>
+<!-- Coded by Mike Reid (mike@mikereid.net) --
+listMIDI();
+//-->
+</SCRIPT>
+</body>
+</html>

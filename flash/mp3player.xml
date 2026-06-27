@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<player showDisplay="yes" showPlaylist="no" autoStart="yes">
+    <song path="media/01 Feels (Moment of Solitary).mp3" title="Feels (Moment Of Solitary)" />
+	   <song path="media/02 Nothing You Can Do.mp3" title="Nothing You Can Do" />
+    	<song path="media/03 I Know I.mp3" title="I Know I" />
+		<song path="media/04 Without The Hope.mp3" title="Without The Hope" />
+		<song path="media/05 Rain.mp3" title="Rain" />
+		<song path="media/06 Painless.mp3" title="Painless" />
+		<song path="media/07 Leave Me Alone.mp3" title="Leave Me Alone" />
+		<song path="media/08 Theme of Hope.mp3" title="Theme Of Hope" />
+		<song path="media/09 Black & White.mp3" title="Black & White" />
+</player>
