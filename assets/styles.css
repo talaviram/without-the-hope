@@ -425,8 +425,9 @@ a {
 }
 
 .credits-scroll {
-  columns: 2;
-  column-gap: 32px;
+  min-height: 0;
+  overflow-y: auto;
+  text-align: center;
 }
 
 .credits-scroll p {
@@ -894,8 +895,10 @@ input[type="range"] {
   }
 
   .credits-scroll {
-    max-height: 55vh;
+    max-height: none;
+    overflow: visible;
     columns: 1;
+    padding-right: 0;
   }
 
   .contact-card form,
