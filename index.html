@@ -248,17 +248,30 @@
     <button id="playlist-toggle" class="player-track" type="button" aria-expanded="false" aria-controls="playlist">
       <span class="player-index">01</span>
       <span><strong id="player-title">Feels (Moment of Solitary)</strong><small id="player-artist">Tal Aviram · Lee Gaon</small></span>
-      <span class="player-toggle-icon" aria-hidden="true"></span>
+      <svg class="player-toggle-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
     </button>
     <div class="player-controls">
       <button id="previous" type="button" aria-label="Previous track">
-        <span class="icon-prev" aria-hidden="true"></span>
+        <svg class="player-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M5 6v12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+          <path d="M19 6l-8 6 8 6z" fill="currentColor"></path>
+        </svg>
       </button>
       <button id="play-pause" class="play-pause" type="button" aria-label="Play">
-        <span class="icon-play" aria-hidden="true"></span><span class="icon-pause" aria-hidden="true"></span>
+        <svg class="player-icon icon-play" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M8 6l11 6-11 6z" fill="currentColor"></path>
+        </svg>
+        <svg class="player-icon icon-pause" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M7 6h3v12H7zM14 6h3v12h-3z" fill="currentColor"></path>
+        </svg>
       </button>
       <button id="next" type="button" aria-label="Next track">
-        <span class="icon-next" aria-hidden="true"></span>
+        <svg class="player-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M5 6l8 6-8 6z" fill="currentColor"></path>
+          <path d="M19 6v12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+        </svg>
       </button>
     </div>
     <div class="player-progress">
@@ -269,7 +282,11 @@
     </div>
     <div class="player-volume">
       <button id="mute" type="button" aria-label="Mute">
-        <span class="icon-volume" aria-hidden="true"></span>
+        <svg class="player-icon player-icon-volume" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M5 10h4l5-4v12l-5-4H5z" fill="currentColor"></path>
+          <path d="M16 9c1 .8 1.5 1.7 1.5 3s-.5 2.2-1.5 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M18.5 7c1.7 1.4 2.5 3.2 2.5 5s-.8 3.6-2.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
       </button>
       <label class="sr-only" for="volume">Volume</label>
       <input id="volume" type="range" min="0" max="1" step="0.05" value="0.8">
