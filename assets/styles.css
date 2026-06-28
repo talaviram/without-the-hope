@@ -593,6 +593,18 @@ a {
   font-weight: normal;
 }
 
+.player-toggle-icon {
+  display: block;
+  justify-self: end;
+  width: 0;
+  height: 0;
+  border-top: 5px solid currentColor;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  color: var(--accent);
+  transform: translateY(1px);
+}
+
 .player-controls {
   display: flex;
   align-items: center;
@@ -600,10 +612,11 @@ a {
 }
 
 .player-controls button {
+  display: grid;
+  place-items: center;
   width: 31px;
   height: 31px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.75rem;
 }
 
 .player-controls button:hover {
@@ -618,8 +631,85 @@ a {
   color: white;
 }
 
+.icon-prev,
+.icon-next,
+.icon-play,
+.icon-pause,
+.icon-volume {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-prev::before,
+.icon-next::before,
+.icon-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-style: solid;
+}
+
+.icon-prev::before {
+  left: 8px;
+  border-width: 6px 8px 6px 0;
+  border-color: transparent currentColor transparent transparent;
+}
+
+.icon-prev::after,
+.icon-next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+  transform: translateY(-50%);
+}
+
+.icon-prev::after {
+  left: 18px;
+}
+
+.icon-next::before {
+  right: 8px;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.icon-next::after {
+  right: 18px;
+}
+
+.icon-play::before {
+  left: 12px;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent currentColor;
+}
+
 .icon-pause {
   display: none;
+}
+
+.icon-pause::before,
+.icon-pause::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  height: 16px;
+  background: currentColor;
+  transform: translateY(-50%);
+}
+
+.icon-pause::before {
+  left: calc(50% - 5px);
+}
+
+.icon-pause::after {
+  left: calc(50% + 2px);
 }
 
 .player[data-state="playing"] .icon-play {
@@ -627,7 +717,36 @@ a {
 }
 
 .player[data-state="playing"] .icon-pause {
-  display: inline;
+  display: block;
+}
+
+.icon-volume::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 5px;
+  height: 8px;
+  background: currentColor;
+  transform: translateY(-50%);
+}
+
+.icon-volume::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 8px solid currentColor;
+  border-bottom: 5px solid transparent;
+  transform: translateY(-50%);
+}
+
+.icon-volume,
+.player-volume button {
+  overflow: visible;
 }
 
 .player-progress {
